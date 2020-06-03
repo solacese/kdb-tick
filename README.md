@@ -6,7 +6,7 @@ Forked from https://github.com/KxSystems/kdb-tick
 
 Code in this repo shows various patterns that can be accomplished using KDB and Solace.
 
-Use the [official installation guide](https://github.com/KxSystems/solace#installation) to install the kdb integration with solace
+Use the [official installation guide](https://github.com/KxSystems/solace#installation) to install the solace integration with kdb
 
 
 ### Examples
