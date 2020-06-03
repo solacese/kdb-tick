@@ -12,7 +12,7 @@ Use the [official installation guide](https://github.com/KxSystems/solace#instal
 ### Examples
 
     * tick/solace-tp.q - shows how to feed your ticker plant with data coming from solace.     
-    * tick/tp-solace.q - show how to publish out ticker plant updates into solace. Can be used for use cases such as 
+    * tick/tp-solace.q - show how to publish out ticker plant updates into solace.
 
 
 
