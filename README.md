@@ -1,18 +1,18 @@
-# kdb+tick
+# kdb+tick+solace
 
-Files previously at code.kx.com/wsvn/kx/kdb+tick
+Forked from https://github.com/KxSystems/kdb-tick
+
+### KDB Solace Integration Repo
+
+Code in this repo shows various patterns that can be accomplished using KDB and Solace.
+
+Use the [official installation guide](https://github.com/KxSystems/solace#installation) to install the kdb integration with solace
 
 
-## Hot-linking
+### Examples
 
-You are welcome to download and use this code according to the terms of the licence. 
+    * tick/solace-tp.q - shows how to feed your ticker plant with data coming from solace.     
+    * tick/tp-solace.q - show how to publish out ticker plant updates into solace. Can be used for use cases such as 
 
-Kx Systems recommends you do not link your application to this repository, 
-which would expose your application to various risks:
 
-- This is not a high-availability hosting service
-- Updates to the repo may break your application 
-- Code refactoring might return 404s to your application
 
-Instead, download code and subject it to the version control and regression testing 
-you use for your application.
