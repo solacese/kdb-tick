@@ -30,7 +30,9 @@ default.user :"default"
 default.pass :"default"
 ```
 
-You can now wire both of these two examples together to enable kdb+->kdb+ replication architecture as illustrated below.
+You can now wire both of these two examples together to enable realtime kdb+->kdb+ replication architecture across distributed q aplication.
+
+
 ![kdbreplication](kdbreplication.png)
 
 
