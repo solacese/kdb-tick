@@ -10,14 +10,12 @@ if[not "w"=first string .z.o;system "sleep 1"];
 
 
 sendToSolace:{[t;d]
-       ty: type(d);
-       if[ty = 98h;
+        if[not 98h=type d;:(::)];
+        d:update `g#sym from d;
         s:exec distinct sym from d;
-        a:s!{{"solace/kdb/",string(y),"/",string(x)}x} each s;
-        b:{[x;y] .j.j select from x where sym=y}[d;];
-        p:s!b each s;
-        l:{[x;y;t;s] .solace.sendDirect[`$raze x[s][t];y[s]]}[a;p;t];
-        l each s]
+        topics:{[t;s] "/" sv ("solace/kdb";string t;string s)}[t] each s;
+        json:{[d;s] .j.j select from d where sym=s}[d] each s;
+        .solace.sendDirect'[topics;json]
     }
 
 
