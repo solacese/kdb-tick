@@ -15,5 +15,11 @@ if[0>.solace.init initparams;-2"### Initialization failed";exit 1];
 h:neg hopen `:localhost:5010; /connect to tickerplant 
 
 
-0op
+onmsg:{[dest;payload;dict]
+ j:.j.k "c"$payload;
+ h(".u.upd";`quote;.z.P,"Sffii"$j`sym`bid`ask`bsize`asize) 
+ }
 
+.solace.setTopicMsgCallback`onmsg
+
+.solace.subscribeTopic[`$"solace/kdb/quote/>";1b];
